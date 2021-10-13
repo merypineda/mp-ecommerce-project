@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
+import SignInForm from './signinForm';
 
 class SignIn extends Component {
     render() {
         return (
             <div className='sign-in'>
-              Sign In  
+                <SignInForm className='sign-in__form' />
             </div>
-        );
+        )
     }
 }
 
