@@ -11,25 +11,16 @@ html {
     font-family: 'montserrat'; // to eliminate unnecesarry space
 }
 
-// body {
-//     overflow-x: hidden;
-//     font-weight: normal;
+body {
+    font-family: "Open Sans";
+    color: #808080;
 
-//     -webkit-font-smoothing: antialiased;
-//     -moz-osx-font-smoothing: grayscale;
-//     text-rendering: optimizeLegibility;
-//     -webkit-tap-highlight-color: transparent;
-// }
-
-// .app {
-//     margin-top: 2rem;
-//     display: grid;
-//     justify-items: center;
-// }
+}
 
 @import "./variable.scss";
 @import "./layout.scss";
 @import "./headernavbar.scss";
 @import "./auth/signin.scss";
 @import "./auth/signup.scss";
-@import "./page-title.scss"
+@import "./page-title.scss";
+@import "./form-fields.scss";

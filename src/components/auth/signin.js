@@ -3,9 +3,11 @@ import SignInForm from './signinForm';
 import PageTitle from '../pageTitle';
 
 class SignIn extends Component {
+
     onSubmit = (fields) => {
         console.log(fields);    
     }
+    
     render() {
         return (
             <div className='sign-in'>
