@@ -25,12 +25,15 @@
         height: 38px;
         width: 243px;
         border-radius: 20px;
+        border: 1px solid #E6E6E6;
         background-color: #00CB79;
         font-size: 16px;
         color: white;
+        cursor: pointer;
 
         &:focus {
             outline: none;
+           
         }
     }
 } 
