@@ -9,21 +9,18 @@ class SignUpForm extends Component {
     render() {
         const { className, handleSubmit } = this.props; // to the the array out of the props
       
-        const links = [
+        const info = [
             {
                 _id: 0,
-                title: 'Not registered? Create an account here',
-                onClick: () => history.push('/signup')
+                title: 'At least 6 characters',
             },
             {
                 _id: 1,
-                title: 'Forgot account email?',
-                onClick: () => console.log('Forgot email')
+                title: 'At least one number?',
             },
             {
                 _id: 2,
-                title: 'Forgot password',
-                onClick: () => console.log('forgot password')
+                title: 'At least one symbol',
             }
         ]
         return (
@@ -50,7 +47,7 @@ class SignUpForm extends Component {
             name='password'
             component={FormInput} />
 
-            <Field className='sign-up-form__confirm-password'
+            <Field className='sign-up-form__confirm'
             type='password'
             title='Confirm Password'
             placeholder='Confirm Password'
@@ -62,21 +59,21 @@ class SignUpForm extends Component {
 
             <div className='sign-up-form__line'></div>
             <Field className='sign-up-form__login'
-            onClick={() => console.log('tryna submit')}
+            onClick={() => history.push('/shop')}
             type='submit'
-            title='Login'
+            title='Create Account'
             name='login'
             component={FormButton} />
 
             <Field className='sign-up-form__back'
-            onClick={() => console.log('tryna go back')}
+            onClick={() => history.push('/signin')}
             type='button'
             title='Back'
             name='back'
             short={true}
             component={FormButton} />
 
-            <Details className='sign-up-form__details' title='Password requirements' links={links} />
+            <Details className='sign-up-form__details' title='Password requirements' info={info} />
 
         </form>
         )
