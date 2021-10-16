@@ -5,25 +5,8 @@ import {
 // the reducer component 
 
 const INITIAL_STATE = {
-    headerLinks: [
-        {
-            title: 'Shop'
-        },
-        {
-            title: 'Logout'
-        }
-    ],
-    navbarLinks: [
-        {
-            title: 'Accounnt',
-            active: true
-        },
-        {
-            title: 'Purchase',
-            active: false
-
-        }
-    ]
+    headerLinks: [],
+    navbarLinks: []
 }
 
 export default function(state = INITIAL_STATE, action) {
