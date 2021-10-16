@@ -1,12 +1,13 @@
 import {
     SET_HEADER_LINKS,
-    SET_NAVBAR_LINKS
+    SET_NAVBAR_LINKS,
+    CHANGE_NAVBAR_ACTIVE
 } from '../actions/types';
 // the reducer component 
 
 const INITIAL_STATE = {
     headerLinks: [],
-    navbarLinks: []
+    navbarLinks: [],
 }
 
 export default function(state = INITIAL_STATE, action) {
@@ -22,6 +23,19 @@ export default function(state = INITIAL_STATE, action) {
                 ...state,
                 navbarLinks: action.payload
             }
+
+            case CHANGE_NAVBAR_ACTIVE:
+                const navbarLinks = state.navbarLinks.map(link => {
+                    link.active = false;
+                    if(link._id == action.payload) {
+                        link.active = true;
+                    }
+                    return link
+                })
+                return {
+                    ...state,
+                    navbarLinks
+                }
         default: return state;
     }
 }
