@@ -1,7 +1,7 @@
 import {
     SET_HEADER_LINKS,
     SET_NAVBAR_LINKS
-} from '../actions/types'
+} from '../actions/types';
 // the reducer component 
 
 const INITIAL_STATE = {
@@ -16,7 +16,7 @@ export default function(state = INITIAL_STATE, action) {
                 ...state,
                 headerLinks: action.payload
             }
-
+            
         case SET_NAVBAR_LINKS:
             return {
                 ...state,

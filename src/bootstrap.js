@@ -12,8 +12,8 @@ import "./style/main.scss";
 import history from "./history";
 
 import Layout from "./components/layout";
-import SignIn from "./components/auth/signin"
-import SignUp from "./components/auth/signup"
+import SignIn from "./components/auth/signin";
+import SignUp from "./components/auth/signup";
 import Account from "./components/account/account";
 
 function main() {
