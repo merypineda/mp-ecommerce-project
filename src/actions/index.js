@@ -6,7 +6,8 @@ import {
 
 import {
     fetchUserPurchases,
-    setPurchaseDetails
+    setPurchaseDetail
+
 
 } from './user'
 
@@ -16,5 +17,5 @@ export {
     changeNavbarActive,
     
     fetchUserPurchases,
-    setPurchaseDetails
+    setPurchaseDetail
 };

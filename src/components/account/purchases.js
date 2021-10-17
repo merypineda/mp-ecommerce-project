@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import * as actions from '../../actions';
 import { connect } from 'react-redux';
-import PurchaseDetails from './purchaseDetails';
+import PurchaseDetail from './purchaseDetail';
 
 class Purchases extends Component {
 
