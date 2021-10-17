@@ -20,7 +20,7 @@ class Account extends Component {
                 _id: 1,
                 title: 'Logout',
                 path: '/'
-            }
+            } // the header link for log in and log out
         ]
 
         const navbarLinks = [
