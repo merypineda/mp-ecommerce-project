@@ -32,7 +32,7 @@ export class FormButton extends Component {
 
 export class ChangePasswordButton extends Component {
     render() {
-        const { className, title, type, onClick, input,  labelTitle} = this.props;
+        const { className, labelTitle, title, type, onClick, input,  } = this.props;
         return (
             <div className={`${className} form-button-long-gray `}>
                 <label className='form-button-long-gray __label'>{labelTitle}</label>
