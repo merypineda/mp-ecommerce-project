@@ -1,46 +1,56 @@
 import { 
-    // SET_SHOP_CATEGORIES
-    SET_NAVBAR_LINKS, 
-    SET_SHOP_PRODUCTS
+    SET_SHOP_CATEGORIES,
+    SET_SHOP_PRODUCTS,
+    FILTER_PRODUCTS_WITH_CATEGORY_ID
     
 } from './types'
 
+export function filterProductsWithCategoryId(_id) {
+    console.log(_id, 'kk');
+    
+    return ({
+        type: FILTER_PRODUCTS_WITH_CATEGORY_ID,
+        payload: _id
+    })
+}
+
 export function fetchShopCategories() {
     return ({
-        type: SET_NAVBAR_LINKS,
-        payload: [
-            {
-                _id: 0,
-                title: 'All'
-            },
-            {
-                _id: 1,
-                title: 'JavaScripts'
-            },
-            {
-                _id: 2,
-                title: 'UI/UX'
-            },
-            {
-                _id: 3,
-                title: 'Linux'
-            },
-            {
-                _id: 4,
-                title: 'Python'
-            },
-            {
-                _id: 5,
-                title: 'UML'
-            },
-            {
-                _id: 6,
-                title: 'Ruby'
-            }
+        type: SET_SHOP_CATEGORIES,
+        payload: 
+        [
+                {
+                    _id: 0,
+                    title: 'All'
+                },
+                {
+                    _id: 1,
+                    title: 'JavaScripts'
+                },
+                {
+                    _id: 2,
+                    title: 'UI/UX'
+                },
+                {
+                    _id: 3,
+                    title: 'Linux'
+                },
+                {
+                    _id: 4,
+                    title: 'Python'
+                },
+                {
+                    _id: 5,
+                    title: 'UML'
+                },
+                {
+                    _id: 6,
+                    title: 'Ruby'
+                }
 
 
         ]
-    })
+  })
 }
 
 export function fetchShopProducts() {
