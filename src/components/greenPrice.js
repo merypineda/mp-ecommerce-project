@@ -5,8 +5,8 @@ class GreenPriceTag extends Component {
         const { className, title } = this.props // to get it out of the component
         return (
             <div className={`${className} green-price-tag`}>
-                ${title}
-            </div>
+                ${title} 
+            </div> // the dollar sign adds it to the application...
         );
     }
 }
