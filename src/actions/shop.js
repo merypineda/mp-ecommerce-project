@@ -1,9 +1,17 @@
 import { 
     SET_SHOP_CATEGORIES,
     SET_SHOP_PRODUCTS,
-    FILTER_PRODUCTS_WITH_CATEGORY_ID
+    FILTER_PRODUCTS_WITH_CATEGORY_ID,
+    FILTER_PRODUCTS_WITH_QUERY
     
 } from './types'
+
+export function filterProductWithQuery(fields) {
+    return ({
+        type: FILTER_PRODUCTS_WITH_QUERY,
+        payload: fields
+    })
+}
 
 export function filterProductsWithCategoryId(_id) {
     return ({
