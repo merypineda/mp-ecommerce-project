@@ -6,8 +6,6 @@ import {
 } from './types'
 
 export function filterProductsWithCategoryId(_id) {
-    console.log(_id, 'kk');
-    
     return ({
         type: FILTER_PRODUCTS_WITH_CATEGORY_ID,
         payload: _id
