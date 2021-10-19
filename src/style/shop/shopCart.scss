@@ -66,6 +66,7 @@ width: 76px;
 
         display: grid;
         overflow-y: scroll; // this makes everythin fit inside the cart..
+        grid-row-gap: 45px;
     }
 
     &__footer {
