@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
+import CartButton from './cartButton';
 import ShopCart from './shopCart';
 import ShopProduct from './shopProduct';
 import ShopSearchBar from './shopSearchBar';
@@ -43,6 +44,14 @@ class Shop extends Component {
         console.log(fields);
         this.props.filterProductWithQuery(fields)
     }
+
+    handleAddToCart = () => {
+        if(document.getElementById('shop-cart').classList.contains('cart-hidden')) {
+            document.getElementById('shop-cart').classList.remove('cart-hidden');
+        } else {
+            document.getElementById('shop-cart').classList.add('cart-hidden');
+        } // this adds and removes the cart
+    }
     
     render() {
         return (
@@ -60,8 +69,7 @@ class Shop extends Component {
            { 
                 this.state.showCart ? <ShopCart className='shop__cart'/> : ''
             }
-
-            {/* shop cart button */}
+            <CartButton onClick={this.handleAddToCart} className='shop__cart-button' icon='fas fa-cart-plus' />
             </div>
         );
     }
