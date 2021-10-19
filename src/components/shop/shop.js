@@ -8,6 +8,15 @@ import ShopSearchBar from './shopSearchBar';
 
 
 class Shop extends Component {
+    constructor() {
+        super()
+
+        this.state = {
+            showCart: true
+        }
+    }
+
+
     componentDidMount() {
         const headerLinks = [
             {
@@ -18,6 +27,7 @@ class Shop extends Component {
         ]
         this.props.setHeaderLinks(headerLinks);
         this.props.fetchShopCategories()
+        // filter products with links
         this.props.fetchShopProducts();
 
     }
@@ -47,7 +57,10 @@ class Shop extends Component {
                 })
                 }
             </div>
-            <ShopCart />
+           { 
+                this.state.showCart ? <ShopCart className='shop__cart'/> : ''
+            }
+
             {/* shop cart button */}
             </div>
         );
