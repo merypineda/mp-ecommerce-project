@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
+import ShopCart from './shopCart';
 import ShopProduct from './shopProduct';
 import ShopSearchBar from './shopSearchBar';
 
@@ -46,6 +47,7 @@ class Shop extends Component {
                 })
                 }
             </div>
+            <ShopCart />
             {/* shop cart button */}
             </div>
         );
