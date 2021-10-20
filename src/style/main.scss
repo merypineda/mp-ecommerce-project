@@ -14,6 +14,10 @@ body {
     font-family: "Open Sans";
     color: #808080;
 
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-tap-highlight-color: transparent;
 }
 
 @import "./variable.scss";
