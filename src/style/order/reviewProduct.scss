@@ -36,3 +36,31 @@
 
     }
 }
+
+.review-form__legend {
+    display: grid;
+    grid-template-columns: [image-s] 80px [image-e title-s] 1fr [title-e quantity-s] 1fr [quantity-e price-s] .5fr [price-e] 40px;
+    grid-template-rows: [s] 1fr [e];
+    grid-column-gap: 30px;
+
+    align-items: center;
+
+    & > * {
+        grid-row: s/e;
+
+    }
+    &__name {
+        grid-column: image-s/image-e;
+
+    }
+    &__quantity {
+        grid-column: quantity-s/quantity-e;
+  
+    }
+
+    &__price {
+        grid-column: price-s/price-e;
+        justify-self: end;
+
+    }
+}
