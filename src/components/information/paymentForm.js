@@ -2,62 +2,58 @@ import React, { Component } from 'react';
 
 import { reduxForm, Field } from 'redux-form';
 import { FormInput, FormButton } from '../formFields';
-
-import history from '../../history';
+import OrderSummary from './orderSummary';
 
 class PaymentForm extends Component {
     render() {
         const { className, handleSubmit } = this.props; // to the the array out of the props
         return (
             <form onSubmit={handleSubmit} className={`${className} payment-form`}>
-            
-            <Field className='payment-form__name'
-            type='name'
-            title='Name'
-            placeholder='Name'
-            name='name'
-            component={FormInput} />
-            
-            <Field className='payment-form__email'
-            type='email'
-            title='Email'
-            placeholder='Email'
-            name='email'
-            component={FormInput} />
+                <Field className='payment-form__name'
+                type='name'
+                title='Name'
+                placeholder='Name on Credit Card'
+                name='name'
+                component={FormInput}/>
+                <Field className='payment-form__card'
+                type='card'
+                title='Card Number'
+                placeholder='____-____-____-____'
+                name='card'
+                component={FormInput}/>
+                  <Field className='payment-form__expiration'
+                type='expiration'
+                title='Expiration'
+                placeholder='Expiration'
+                name='expiration'
+                component={FormInput}/>
+                <Field className='payment-form__ccv'
+                type='ccv'
+                title='CCV'
+                placeholder='CCV'
+                name='ccv'
+                component={FormInput}/>
 
-            <Field className='payment-form__password'
-            type='password'
-            title='Password'
-            placeholder='Password'
-            name='password'
-            component={FormInput} />
+                <div className='payment-form__line'></div>
+                <Field className='payment-form__pay-complete'
+                onClick={() => history.push('/information/payment')}
+                type='submit'
+                title='Pay & Complete'
+                name='pay-complete'
+                component={FormButton}/>
+                <Field className='payment-form__back'
+                onClick={() => history.push('/signin')}
+                type='button'
+                title='Back'
+                name='back'
+                short={true}
+                component={FormButton}/>
 
-            <Field className='payment-form__confirm'
-            type='password'
-            title='Confirm Password'
-            placeholder='Confirm Password'
-            name='confirm'
-            component={FormInput} />
+                <OrderSummary className='payment-form__order-summary' />
 
+            </form>
 
-
-
-            <div className='sign-up-form__line'></div>
-            <Field className='sign-up-form__login'
-            onClick={() => history.push('/shop')}
-            type='submit'
-            title='Create Account'
-            name='login'
-            component={FormButton} />
-
-            <Field className='payment-form__back'
-            onClick={() => history.push('/signin')}
-            type='button'
-            title='Back'
-            name='back'
-            short={true}
-            component={FormButton} />
-        </form>
+      
         )
     }
 }
