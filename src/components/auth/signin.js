@@ -5,15 +5,18 @@ import PageTitle from '../pageTitle';
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
 
+
 class SignIn extends Component {
 
     componentDidMount() {
         this.props.setHeaderLinks([]),
         this.props.setNavbarLinks([])
+        
     }
 
     onSubmit = (fields) => {
-        console.log(fields);    
+        this.props.signIn(fields);
+        this.props.history.push('/account');
     }
    
     render() {
