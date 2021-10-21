@@ -9,30 +9,30 @@ class PaymentForm extends Component {
     render() {
         const { className, handleSubmit } = this.props; // to the the array out of the props
         return (
-            <form onSubmit={handleSubmit} className={`${className} sign-up-form`}>
+            <form onSubmit={handleSubmit} className={`${className} payment-form`}>
             
-            <Field className='sign-up-form__name'
+            <Field className='payment-form__name'
             type='name'
             title='Name'
             placeholder='Name'
             name='name'
             component={FormInput} />
             
-            <Field className='sign-up-form__email'
+            <Field className='payment-form__email'
             type='email'
             title='Email'
             placeholder='Email'
             name='email'
             component={FormInput} />
 
-            <Field className='sign-up-form__password'
+            <Field className='payment-form__password'
             type='password'
             title='Password'
             placeholder='Password'
             name='password'
             component={FormInput} />
 
-            <Field className='sign-up-form__confirm'
+            <Field className='payment-form__confirm'
             type='password'
             title='Confirm Password'
             placeholder='Confirm Password'
@@ -50,7 +50,7 @@ class PaymentForm extends Component {
             name='login'
             component={FormButton} />
 
-            <Field className='sign-up-form__back'
+            <Field className='payment-form__back'
             onClick={() => history.push('/signin')}
             type='button'
             title='Back'
